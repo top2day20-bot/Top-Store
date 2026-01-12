@@ -1,3 +1,7 @@
+// حماية صفحة الأدمن
+if(!localStorage.getItem("admin")){
+  location.href="login.html";
+}
 // جلب المنتجات من LocalStorage أو إنشاء مصفوفة جديدة
 let products = JSON.parse(localStorage.getItem("products")) || [];
 let list = document.getElementById("adminProducts");
@@ -37,4 +41,5 @@ function del(i){
   localStorage.setItem("products",JSON.stringify(products));
   render();
 }
+
 
