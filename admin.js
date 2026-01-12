@@ -10,7 +10,7 @@ function render(){
   products.forEach((p,i)=>{
     list.innerHTML+=`
     <div>
-      ${p.name} - ${p.price}
+      ${p.name} - ${p.price} [${p.cat}]
       <button onclick="del(${i})">حذف</button>
     </div>`;
   });
@@ -23,7 +23,8 @@ form.onsubmit = e =>{
     name:name.value,
     price:price.value,
     desc:desc.value,
-    img:img.value
+    img:img.value,
+    cat:cat.value
   });
   localStorage.setItem("products",JSON.stringify(products));
   form.reset();
@@ -34,3 +35,4 @@ function del(i){
   products.splice(i,1);
   localStorage.setItem("products",JSON.stringify(products));
   render();
+}
