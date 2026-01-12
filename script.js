@@ -8,5 +8,6 @@ products.forEach(p=>{
     <h3>${p.name}</h3>
     <p>${p.price}</p>
     <p>${p.desc}</p>
-    <a class="whatsapp" href="https://wa.me/201234567890" target="_blank">واتساب</a>
+    <a class="whatsapp" href="https://wa.me/201060820818" target="_blank">واتساب</a>
   </div>`;
+
