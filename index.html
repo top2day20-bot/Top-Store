@@ -9,15 +9,36 @@
 
 <header>
   <h1>Top Store</h1>
+  <small>أفضل أسعار الموبايلات والإكسسوارات</small>
 </header>
 
 <section class="banner">🚚 يوجد توصيل لجميع المناطق</section>
 
+<!-- ===== سلايدر ===== -->
+<section class="slider">
+  <img src="images/slide1.jpg" class="slide active">
+  <img src="images/slide2.jpg" class="slide">
+  <img src="images/slide3.jpg" class="slide">
+</section>
+
+<!-- ===== أقسام المنتجات ===== -->
+<section class="category">
+  <button onclick="showCategory('all')">الكل</button>
+  <button onclick="showCategory('mobile')">موبايلات</button>
+  <button onclick="showCategory('accessory')">إكسسوارات</button>
+</section>
+
+<!-- ===== البحث ===== -->
+<section class="search">
+  <input type="text" id="searchBox" placeholder="ابحث عن منتج..." onkeyup="searchProducts()">
+</section>
+
+<!-- ===== المنتجات ===== -->
 <section id="products" class="products"></section>
 
 <footer>
-  <p>📍 العنوان: قبضايا بجوار كافيه الهضبه</p>
-  <a class="whatsapp" href="https://wa.me/201060820818" target="_blank">تواصل واتساب</a>
+  <p>📍 العنوان: اكتب عنوان المحل هنا</p>
+  <a class="whatsapp" href="https://wa.me/201234567890" target="_blank">تواصل واتساب</a>
 </footer>
 
 <script src="script.js"></script>
