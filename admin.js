@@ -1,10 +1,13 @@
+// حماية صفحة الأدمن
 if(!localStorage.getItem("admin")){
   location.href="login.html";
 }
 
+// جلب المنتجات من LocalStorage أو إنشاء مصفوفة جديدة
 let products = JSON.parse(localStorage.getItem("products")) || [];
 let list = document.getElementById("adminProducts");
 
+// دالة عرض المنتجات
 function render(){
   list.innerHTML="";
   products.forEach((p,i)=>{
@@ -17,6 +20,7 @@ function render(){
 }
 render();
 
+// إضافة منتج جديد
 form.onsubmit = e =>{
   e.preventDefault();
   products.push({
@@ -29,8 +33,10 @@ form.onsubmit = e =>{
   localStorage.setItem("products",JSON.stringify(products));
   form.reset();
   render();
+  alert("تم نشر المنتج بنجاح!");
 };
 
+// حذف منتج
 function del(i){
   products.splice(i,1);
   localStorage.setItem("products",JSON.stringify(products));
