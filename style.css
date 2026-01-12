@@ -24,6 +24,62 @@ header h1{
   margin-bottom:5px;
 }
 
+/* ===== Base Styles (اللي فوق موجود) ===== */
+
+/* ===== Media Query للأجهزة الصغيرة ===== */
+@media screen and (max-width:600px){
+  
+  header h1{
+    font-size:22px;
+  }
+  
+  .banner{
+    font-size:14px;
+    padding:8px;
+  }
+
+  .products{
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:10px;
+    padding:10px;
+  }
+
+  .product img{
+    height:120px;
+  }
+
+  .product h3{
+    font-size:16px;
+  }
+
+  .product p{
+    font-size:12px;
+  }
+
+  .search input{
+    width:95%;
+    font-size:14px;
+  }
+
+  .category button{
+    padding:6px 10px;
+    font-size:12px;
+  }
+
+  .slider{
+    margin:10px;
+  }
+  
+  .slide{
+    height:150px;
+  }
+
+  .login-box{
+    width:95%;
+    padding:20px;
+  }
+}
+
 header small{
   color:#e0f7ff;
 }
@@ -199,3 +255,4 @@ button{
   margin:5px 0;
   border-radius:8px;
 }
+
